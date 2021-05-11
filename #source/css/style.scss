@@ -1,0 +1,263 @@
+@import "nullstyle.scss";
+
+@font-face {
+	font-family: 'BAHNSCHRIFT';
+	src: url('fonts/BAHNSCHRIFT.eot');
+	src: local('☺'), url('fonts/BAHNSCHRIFT.woff') format('woff'), url('fonts/BAHNSCHRIFT.ttf') format('truetype'), url('fonts/BAHNSCHRIFT.svg') format('svg');
+	font-weight: normal;
+	font-style: normal;
+}
+@font-face {
+	font-family: 'BebasNeue';
+	src: url('fonts/BebasNeue Regular.eot');
+	src: local('☺'), url('fonts/BebasNeue Regular.woff') format('woff'), url('fonts/BebasNeue Regular.ttf') format('truetype'), url('fonts/BebasNeue Regular.svg') format('svg');
+	font-weight: normal;
+	font-style: normal;
+}
+@font-face {
+	font-family: 'TNR-KZ';
+	src: url('fonts/KZ.eot');
+	src: local('☺'), url('fonts/KZ.woff') format('woff'), url('fonts/KZ.ttf') format('truetype'), url('fonts/KZ.svg') format('svg');
+	font-weight: normal;
+	font-style: normal;
+}
+
+
+.wrapper {
+	min-height: 100%;
+	overflow: hidden;
+	display: flex;
+	flex-direction: column;
+}
+.container{
+	max-width: 770px;
+	margin: 0 auto;
+	@media (max-width: 810px) {
+		padding: 0 20px;
+	}
+}
+.content {
+	flex: 1 1 auto;
+}
+
+.header {
+	background-color: #000;
+	padding: 25px 0;
+	border-bottom: 1px solid #666;
+	display: flex;
+	align-items: center;
+	&__phone {
+		font-size: 20px;
+		text-align: center;
+		a{
+			color: #fff;
+			text-decoration: none;
+		}
+	}
+}
+
+
+.hello {
+	background-color: #000;
+	border-bottom: 1px solid #666;
+	&__body {
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+		padding: 20px 0 20px 0;
+		@media (max-width: 566px) {
+			flex-direction: column;
+		}
+	}
+	&__logo {
+		img{
+			height: 200px;
+			cursor: pointer;
+		}
+	}
+	&__name {
+		text-align: center;
+		margin: 20px 0 0 0;
+	}
+	&__title {
+		font-size: 50px;
+		color: #fff;
+		font-family: 'BAHNSCHRIFT';
+	}
+	&__subtitle {
+		font-size: 20px;
+		text-transform: uppercase;
+		line-height: 2;
+		color: #fff;
+		font-family: 'BebasNeue';
+	}
+}
+
+
+.menu {
+	background-color: #000;
+	&__list {
+		padding: 20px 0;
+		display: flex;
+		justify-content: space-between;
+		@media (max-width: 566px) {
+			flex-direction: column;
+		}
+		a{
+			font-size: 22px;
+			line-height: 40px;
+			text-decoration: none;
+			color: #fff;
+			font-family: 'BAHNSCHRIFT';
+			&:hover{
+				border-bottom: 1px solid #fff;
+				@media (max-width: 512px) {
+					border: none;
+				}
+			}
+		}
+	}
+}
+
+.about {
+	background-color: #ffbe39;
+	&__body {
+		padding: 20px 0;
+	}
+	&__title {
+		font-size: 24px;
+		margin: 0 0 30px 0;
+		font-family: 'BAHNSCHRIFT';
+	}
+	&__subtitle {
+		p{
+			font-size: 18px;
+			line-height: 30px;
+			font-family: 'TNR-KZ';
+		}
+	}
+}
+
+.gallery {
+	background-color: #000;
+	border-bottom: 1px solid #666;
+	&__body {
+		padding: 20px 0 0 0;
+	}
+	&__title {
+		font-size: 24px;
+		color: #fff;
+		text-align: center;
+		font-family: 'BAHNSCHRIFT';
+	}
+	&__photo {
+		display: flex;
+		margin: 20px 0 20px 0;
+	}
+	&__photo-item {
+		margin: 0 5px;
+		cursor: pointer;
+		&:hover{
+			transform: scale(1.3);
+			transition: all 0.5s ease 0s;
+		}
+		img{
+			border: 5px solid #ffbe39;
+			max-width: 100%;
+		}
+		p{
+			margin: 10px 0 0 0;
+			text-align: center;
+			color: #fff;
+			font-size: 16px;
+			font-family: 'TNR-KZ';
+		}
+	}
+}
+
+.footer {
+	background-color: #000;
+	&__body {
+		padding: 20px 0;
+		color: #fff;
+		display: flex;
+		justify-content: space-between;
+		@media (max-width: 566px) {
+			display: flex;
+			flex-direction: column;
+			margin: 0 auto;
+			text-align: center;
+		}
+	}
+	&__social {
+		@media (max-width: 566px) {
+			display: block;
+		}
+	}
+	&__social-email {
+		font-size: 16px;
+		margin: 0 0 20px 0;
+		a{
+			text-decoration: none;
+			color: #fff;
+			font-family: 'BebasNeue';
+		}
+	}
+	&__name {
+		text-align: center;
+		color: #fff;
+		@media (max-width: 566px) {
+			display: block;
+			margin: 20px 0;
+		}
+	}
+	&__name-title {
+		font-size: 24px;
+		line-height: 40px;
+		margin: 0 0 10px 0;
+		font-family: 'BAHNSCHRIFT';
+	}
+	&__name-rights{
+		font-size: 16px;
+		font-family: 'BebasNeue';
+	}
+	&__adress {
+		font-size: 16px;
+		color: #fff;
+		text-align: right;
+		line-height: 1.6;
+		font-family: 'BebasNeue';
+		@media (max-width: 566px) {
+			display: block;
+			text-align: center;
+		}
+	}
+}
+.fa-instagram {
+	font-size: 24px;
+	color: #74309f;
+	opacity: 0.5;
+	&:hover{
+		opacity: 1;
+		transition: all 0.3s ease 0s;
+	}
+}
+.fa-vk {
+	font-size: 24px;
+	color: #2b6eb2;
+	margin: 0 10px;
+	opacity: 0.5;
+	&:hover{
+		opacity: 1;
+		transition: all 0.3s ease 0s;
+	}
+}
+.fa-whatsapp {
+	font-size: 24px;
+	color: #3e9137;
+	opacity: 0.5;
+	&:hover{
+		opacity: 1;
+		transition: all 0.3s ease 0s;
+	}
+}
